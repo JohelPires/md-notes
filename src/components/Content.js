@@ -1,4 +1,4 @@
-import { Card, Col, ListGroup, ListGroupItem, Row } from 'react-bootstrap'
+import { Col, Form, ListGroup, ListGroupItem, Row } from 'react-bootstrap'
 import React from 'react'
 
 function Content() {
@@ -7,42 +7,43 @@ function Content() {
   }
   return (
     <Row className='conteudo'>
-      <Col md={3}>
-        <ListGroup>
+      <Col className='mt-3x' md={3}>
+        <ListGroup variant='flush'>
           <ListGroupItem onClick={openNote}>
-            <Card>
-              <Card.Title>Name of the note</Card.Title>
-              <Card.Body>
-                some initial words of the file goes here so you get an idea of
-                its contents...
-              </Card.Body>
-            </Card>
+            <h5>Title of the note</h5>
           </ListGroupItem>
-          <ListGroupItem>
-            <Card>
-              <Card.Title>Name of the note</Card.Title>
-              <Card.Body>
-                some initial words of the file goes here so you get an idea of
-                its contents...
-              </Card.Body>
-            </Card>
+          <ListGroupItem onClick={openNote}>
+            <h5>Title of the note</h5>
           </ListGroupItem>
-          <ListGroupItem>
-            <Card>
-              <Card.Title>Name of the note</Card.Title>
-              <Card.Body>
-                some initial words of the file goes here so you get an idea of
-                its contents...
-              </Card.Body>
-            </Card>
+          <ListGroupItem onClick={openNote}>
+            <h5>Title of the note</h5>
+          </ListGroupItem>
+          <ListGroupItem onClick={openNote}>
+            <h5>Title of the note</h5>
+          </ListGroupItem>
+          <ListGroupItem onClick={openNote}>
+            <h5>Title of the note</h5>
           </ListGroupItem>
         </ListGroup>
       </Col>
       <Col md={9}>
         <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sunt
-          nulla debitis numquam eveniet ut magni et ullam dolorum pariatur,
-          velit nisi ea laboriosam, eum odio blanditiis illum nostrum repellat.
+          <Form>
+            <Form.Group
+              className='mt-3 mb-3'
+              controlId='exampleForm.ControlInput1'
+            >
+              {/* <Form.Label>Título da nota</Form.Label> */}
+              <Form.Control type='text' placeholder='Title' />
+            </Form.Group>
+            <Form.Group
+              className='mb-3'
+              controlId='exampleForm.ControlTextarea1'
+            >
+              {/* <Form.Label>Nota:</Form.Label> */}
+              <Form.Control as='textarea' rows={9} />
+            </Form.Group>
+          </Form>
         </div>
       </Col>
     </Row>
